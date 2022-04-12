@@ -1,1 +1,1 @@
-# WUMpriv
+# Introduction to Machine Learning
