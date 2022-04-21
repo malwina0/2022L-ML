@@ -123,6 +123,15 @@ def WoETransform(census_df, woe):
         woechange(key, woe[key], census_df)
     return census_df
 
+def LabelEncodingTest(df):
+    df['workclass'] = df['workclass'].map(dict_workclass)
+    df['occupation'] = df['occupation'].map(dict_occupation)
+    df['sex'] = df['sex'].map(dict_sex)
+    df['race'] = df['race'].map(dict_race)
+    df['relationship'] = df['relationship'].map(dict_relationship)
+    
+    return df
+
 
 def gini_roc2(y_test, y_pred_proba, tytul):
     
