@@ -40,12 +40,15 @@ def TestTransform(census_df_test):
     census_df_test.drop("fnlwgt", axis=1, inplace=True)
     census_df_test.drop("education", axis=1, inplace=True)
     census_df_test['income_level'] = census_df_test['income_level'].replace(['<=50K','>50K'],[0, 1])
-    census_df_test['age'] = pd.qcut(census_df_test['age'], 10, labels=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-    census_df_test['hours_per_week'] = pd.cut(census_df_test['hours_per_week'], bins=[0, 35, 45, np.inf], labels=[1, 2, 3])
+    census_df_test['age'] = pd.cut(census_df_test['age'], bins=[16.0, 22.0, 26.0, 30.0, 34.0, 37.0, 41.0, 45.0, 50.0, 57.0, 91.0], labels=False)
+    census_df_test['hours_per_week'] = pd.cut(census_df_test['hours_per_week'], bins=[0, 35, 45, np.inf], labels=False)
     census_df_test['capital_gain'] = pd.cut(census_df_test['capital_gain'], bins=[-1, 114.0, 3103.0, 5013.0, 7688.0, 15024.0, np.inf], 
                  labels=[0, 1, 2, 3, 4, 5])
     census_df_test['capital_loss'] = pd.cut(census_df_test['capital_loss'], bins=[-1, 155.0, 1619.2, 1887.0, 1902.0, 2002.0, np.inf], 
                  labels=[0, 1, 2, 3, 4, 5])
+    
+    census_df_test['capital_loss'] = pd.to_numeric(census_df_test['capital_loss'])
+    census_df_test['capital_gain'] = pd.to_numeric(census_df_test['capital_gain'])
     
     census_df_test.loc[(census_df_test.native_country != 'United-States') & (census_df_test.native_country != 'Mexico'), 'native_country'] = "Other"
     
