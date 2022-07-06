@@ -12,6 +12,7 @@ Data preprocessing:
 * transforming continuous variables into categorical ones, 
 * coding of categorical variables,
 * preliminary models.
+
 The dataset describes transactions recorded on allegro.co.uk during one full day on 3/04/2016. The variable we predict: price.
 
 ### HW 3
