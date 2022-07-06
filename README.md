@@ -1,7 +1,7 @@
 # Introduction to Machine Learning course
 
 
-Projects & homeworks done together with [@jakub-piw](https://https://github.com/jakub-piw)
+Projects & homeworks done together with [@jakub-piw](https://github.com/jakub-piw)
 
 ---
 
