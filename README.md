@@ -13,3 +13,7 @@ A classification model that determines whether a particular citizen of the Unite
 ### Project 2
 Clustering of US citizens with similar earnings using data from https://archive.ics.uci.edu/ml/datasets/US+Census+Data+%281990%29
 
+---
+
+### Homeworks
+Homework assignments covering EDA, preprocessing, supervised and unsupervised learning, more details [here](https://github.com/malwina0/2022L-ML/blob/main/Homeworks/README.md) 
